@@ -1,0 +1,138 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  border: 15px solid #444;
+  padding: auto;
+}
+
+.custom-line {
+  width: auto;
+  height: 2px;
+  background-color: #9b1414;
+}
+.container {
+  width: 350px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#titulo {
+  text-align: center;
+  color: #9b1414;
+  margin-bottom: 20px;
+}
+
+.enter {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enter input,
+#operacion {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  border: 2px solid #444;
+}
+
+#operacion {
+  padding: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #9b1414;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #8a0f0f;
+}
+
+#resultado {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 12px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.botonCalcular,
+.botonResetear {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.botonBorrar {
+  display: flex;
+  width: auto;
+}
+.botonCalcular {
+  background-color: #9b1414;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.botonCalcular:hover {
+  background-color: #8a0f0f;
+}
+
+.botonResetear {
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.botonResetear:hover {
+  background-color: #222;
+}
+
+.botonBorrar {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #444;
+  padding: 1px;
+  display: auto;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.botonBorrar img {
+  vertical-align: middle;
+  margin-right: auto;
+}
+
+.botonBorrar:hover {
+  background-color: #ccc;
+}
+.error {
+  color: red;
+  padding: 5px;
+  text-align: center;
+}

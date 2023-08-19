@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora Simple</title>
+    <link rel="icon" href="calc.jpg" />
+  </head>
+  <body>
+    <div>
+      <h1 id="titulo">-- Calculadora Simple --</h1>
+      <hr class="custom-line" />
+      <p class="enter">
+        <input id="primerNumero" type="number" placeholder="Primer número" />
+        <button class="botonBorrar" id="clearFirst">
+          <img src="x.jpg" width="30" />
+        </button>
+      </p>
+
+      <p class="enter">
+        <input type="number" id="segundoNumero" placeholder="Segundo número" />
+        <button class="botonBorrar" id="clearSecond">
+          <img src="x.jpg" width="30" />
+        </button>
+      </p>
+
+      <p>
+        <select id="operacion">
+          <option disabled selected>-Elegir operación-</option>
+          <option value="sumar">Sumar</option>
+          <option value="restar">Restar</option>
+          <option value="multiplicar">Multiplicar</option>
+          <option value="dividir">Dividir</option>
+        </select>
+      </p>
+      <button class="botonCalcular" id="calcular">Calcular</button>
+      <button class="botonResetear" id="resetear">Resetear</button>
+      <p id="resultado" placeholder="resultado"></p>
+      <p id="error" class="error"></p>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
