@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(248, 248, 248, 0.8);
+  background-color: white;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 header {
@@ -8,7 +8,7 @@ header {
   border: 3px solid rgba(112, 106, 106, 0.8);
   border-radius: 10px;
 }
-#ERROR {
+.error {
   color: red;
 }
 .container {
@@ -29,7 +29,13 @@ header {
   margin-right: 20%;
   margin-bottom: 5px;
 }
-button {
+.container-choise {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  border: none;
+}
+.playButton {
   display: block;
   width: 10%;
   margin-top: 5px;
@@ -38,8 +44,45 @@ button {
   border: 1px solid;
   color: #332323;
   cursor: pointer;
+}
+button.playButton:hover {
+  background-color: rgba(112, 106, 106, 0.8);
   transition: background-color 0.2s;
 }
-button:hover {
+button.playerChoice {
+  padding: 5px;
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+button.playerChoice:hover {
   background-color: rgba(112, 106, 106, 0.8);
+  transition: background-color 0.2s;
+}
+.refreshButton {
+  display: block;
+  width: 10%;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  border: 1px solid;
+  color: #332323;
+  cursor: pointer;
+}
+button.refreshButton:hover {
+  background-color: rgba(112, 106, 106, 0.8);
+  transition: background-color 0.2s;
+}
+button.playerChoice.Selected {
+  background-color: rgb(49, 101, 0);
+  border-color: rgba(112, 106, 106, 0.8);
+}
+#pcChoice {
+  border: 2px solid rgba(112, 106, 106, 0.8);
+  padding: 10px;
+  border-radius: 15px;
+  min-width: 100px;
+  width: auto;
+  text-align: center;
 }

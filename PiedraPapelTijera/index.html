@@ -13,18 +13,37 @@
     </div>
     <div class="container">
       <div class="item2">
-        <input id="playerName" type="text" placeholder="Ingrese su nombre" />
+        <input
+          required
+          id="playerName"
+          type="text"
+          placeholder="Ingrese su nombre"
+        />
+      </div>
+
+      <div class="container-choise" id="userSelection">
+        <button class="playerChoice" id="ROCK">
+          <img atl="Piedra" src="\sobre-mi\Imagenes\ROCK.jpg" width="100" />
+        </button>
+        <button class="playerChoice" id="PAPER">
+          <img atl="Papel" src="\sobre-mi\Imagenes\PAPER.jpg" width="100" />
+        </button>
+        <button class="playerChoice" id="SCISSORS">
+          <img
+            atl="Tijeras"
+            src="\sobre-mi\Imagenes\SCISSORS.jpg"
+            width="100"
+          />
+        </button>
       </div>
       <div>
-        <select id="userSelection">
-          <option disabled selected>-Seleccione su mano-</option>
-          <option value="ROCK">Piedra</option>
-          <option value="PAPER">Papel</option>
-          <option value="SCISSORS">Tijeras</option>
-        </select>
+        <p id="pcChoice" name="pcChoice">Elección de la PC</p>
       </div>
+
       <div id="message"></div>
+      <div id="messageScore"></div>
       <button class="playButton" id="play">Jugar</button>
+      <button class="refreshButton" id="Refresh">Limpiar</button>
     </div>
     <script src="script.js"></script>
   </body>
