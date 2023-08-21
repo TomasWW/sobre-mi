@@ -7,6 +7,8 @@ header {
   text-align: center;
   border: 3px solid rgba(112, 106, 106, 0.8);
   border-radius: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .error {
   color: red;
@@ -29,15 +31,29 @@ header {
   margin-right: 20%;
   margin-bottom: 5px;
 }
+.playButton.error {
+  background-color: rgba(255, 0, 0, 0.316);
+  border-color: black;
+}
 .container-choise {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   border: none;
 }
+.item2 input {
+  border-radius: 8px;
+  border: 2px solid gray;
+  font-size: auto;
+  text-align: center;
+}
+input:focus {
+  background-color: rgba(128, 128, 128, 0.34);
+  outline: none;
+}
 .playButton {
   display: block;
-  width: 10%;
+  width: 20%;
   margin-top: 5px;
   border-radius: 10px;
   background-color: whitesmoke;
@@ -62,7 +78,7 @@ button.playerChoice:hover {
 }
 .refreshButton {
   display: block;
-  width: 10%;
+  width: 20%;
   margin-top: 5px;
   border-radius: 10px;
   background-color: whitesmoke;
@@ -71,9 +87,10 @@ button.playerChoice:hover {
   cursor: pointer;
 }
 button.refreshButton:hover {
-  background-color: rgba(112, 106, 106, 0.8);
+  background-color: rgba(110, 52, 52, 0.8);
   transition: background-color 0.2s;
 }
+
 button.playerChoice.Selected {
   background-color: rgb(49, 101, 0);
   border-color: rgba(112, 106, 106, 0.8);
@@ -85,4 +102,35 @@ button.playerChoice.Selected {
   min-width: 100px;
   width: auto;
   text-align: center;
+}
+.container-results {
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 2px solid rgb(124, 145, 92);
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding-top: 0;
+}
+h5 {
+  margin-top: 1px;
+  border: 2px solid gray;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 12px;
+  margin-bottom: 0;
+}
+.container-results #plays {
+  margin-top: 0;
+  flex-direction: column;
+  align-items: baseline;
+  align-content: space-around;
+}
+.Final {
+  border: 2px solid gray;
+  color: green;
+  background-color: rgba(0, 128, 0, 0.267);
+  border-radius: 10px;
+  padding: 2px;
 }
