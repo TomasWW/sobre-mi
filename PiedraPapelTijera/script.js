@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   playerChoice.forEach((button) => {
+    //Eleecion del usuario
     button.addEventListener("click", function () {
       const buttonId = this.id; // Obtener el valor del atributo "id" del botón clicado
 
@@ -65,15 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
       playButton.classList.add("error");
       if (PCCount > playerCount) {
         final.classList.add("Final");
-        document.getElementById("Final").innerHTML = "GANO PC";
-      } else if (PCCount < playerCount) {
+        final.innerHTML = PC_WINS;
+      }
+      if (PCCount < playerCount) {
         final.classList.add("Final");
-        document.getElementById(
-          "Final"
-        ).innerHTML = `Gano: ${playerNameValue.toUpperCase()}`;
-      } else {
+        final.innerHTML = USER_WINS;
+      }
+      if (PCCount === playerCount) {
         final.classList.add("Final");
-        document.getElementById("Final").innerHTML = "Empate";
+        final.innerHTML = DRAW;
       }
     } else playerNameValue = playerName.value; // Obtener el valor del campo y eliminar espacios en blanco al inicio y al final
     let error = "";
