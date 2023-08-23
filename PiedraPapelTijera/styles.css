@@ -1,9 +1,10 @@
 body {
   background-color: white;
+  background-image: url("../Imagenes/FondoPPT.jpg");
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 header {
-  background-color: rgba(196, 196, 196, 0.8);
+  background-color:rgba(245, 245, 245, 0.93);
   text-align: center;
   border: 3px solid rgba(112, 106, 106, 0.8);
   border-radius: 10px;
@@ -13,6 +14,8 @@ header {
 .error {
   color: red;
 }
+
+/* Ordena el contenedor principal */
 .container {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -30,6 +33,7 @@ header {
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 5px;
+  background-color:rgba(245, 245, 245, 0.93)
 }
 .playButton.error {
   background-color: rgba(255, 0, 0, 0.316);
@@ -39,18 +43,24 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  border: none;
+  border-radius: 15px;
+  background-color:white;
+  border: 2px solid gray;
+  margin-top: 10px;
 }
 .item2 input {
   border-radius: 8px;
   border: 2px solid gray;
   font-size: auto;
   text-align: center;
+  margin-top: 5px;
 }
 input:focus {
   background-color: rgba(128, 128, 128, 0.34);
   outline: none;
 }
+
+/* Caracteristicas de boton "jugar" */
 .playButton {
   display: block;
   width: 20%;
@@ -61,10 +71,14 @@ input:focus {
   color: #332323;
   cursor: pointer;
 }
+
+/* caracteristicas de sombreado al pasar el cursor "jugar" */
 button.playButton:hover {
   background-color: rgba(112, 106, 106, 0.8);
   transition: background-color 0.2s;
 }
+
+
 button.playerChoice {
   padding: 5px;
   margin: 5px;
@@ -72,10 +86,15 @@ button.playerChoice {
   border: none;
   cursor: pointer;
 }
+
+/* Le da animacion al poner el cursor sobre las opciones del jugador */
 button.playerChoice:hover {
   background-color: rgba(112, 106, 106, 0.8);
   transition: background-color 0.2s;
+  transform: rotate(15deg);
 }
+
+/* Caracteristicas del boton de limpiar/refrescar */
 .refreshButton {
   display: block;
   width: 20%;
@@ -86,6 +105,7 @@ button.playerChoice:hover {
   color: #332323;
   cursor: pointer;
 }
+/* Colore el boton de refescar  */
 button.refreshButton:hover {
   background-color: rgba(110, 52, 52, 0.8);
   transition: background-color 0.2s;
@@ -103,15 +123,19 @@ button.playerChoice.Selected {
   width: auto;
   text-align: center;
 }
+/* Le da estilo al boton que aparece con el resultado final */
 .container-results {
   display: flex;
   margin-left: 20%;
   margin-right: 20%;
-  border: 2px solid rgb(124, 145, 92);
+  border: 2px solid rgb(112, 106, 106, 0.8);
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
   padding-top: 0;
+  background-color:rgba(245, 245, 245, 0.93);
+  width: auto;
+  height: auto;
 }
 h5 {
   margin-top: 1px;
