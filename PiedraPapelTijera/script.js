@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const refresh = document.getElementById("Refresh");
   const pcChoice = document.getElementById("pcChoice");
   const final = document.getElementById("Final");
+  const messageScore = document.getElementById("messageScore");
   const ROCK = "Piedra";
   const PAPER = "Papel";
   const SCISSORS = "Tijeras";
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const PC_WINS = "Gano la PC";
   const DRAW = "Empate";
   let score;
-  let plays = 1;
+
   let playerCount = 0;
   let PCCount = 0;
 
@@ -61,22 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   playButton.addEventListener("click", function () {
-    if (plays >= 5) {
-      playButton.disabled = true;
-      playButton.classList.add("error");
-      if (PCCount > playerCount) {
-        final.classList.add("Final");
-        final.innerHTML = PC_WINS;
-      }
-      if (PCCount < playerCount) {
-        final.classList.add("Final");
-        final.innerHTML = USER_WINS;
-      }
-      if (PCCount === playerCount) {
-        final.classList.add("Final");
-        final.innerHTML = DRAW;
-      }
-    } else playerNameValue = playerName.value; // Obtener el valor del campo y eliminar espacios en blanco al inicio y al final
+    playerNameValue = playerName.value; // Obtener el valor del campo y eliminar espacios en blanco al inicio y al final
     let error = "";
     USER_WINS = `Gano ${playerNameValue.toUpperCase()}`;
     if (playerNameValue === "") {
@@ -115,8 +101,22 @@ document.addEventListener("DOMContentLoaded", function () {
         "playerWin"
       ).innerHTML = `${playerNameValue.toUpperCase()}: ${playerCount}`;
       document.getElementById("PCWin").innerHTML = `PC: ${PCCount}`;
-      document.getElementById("plays").innerHTML = `Jugada N°: ${plays}`;
-      plays += 1;
+      console.log("PC " + PCCount);
+      console.log("user" + playerCount);
+      if (PCCount == 3 || playerCount == 3) {
+        playButton.disabled = true;
+        playButton.classList.add("error");
+        if (PCCount > playerCount) {
+          final.classList.add("Final");
+          final.innerHTML = PC_WINS;
+        } else if (PCCount < playerCount) {
+          final.classList.add("Final");
+          final.innerHTML = USER_WINS;
+        } else {
+          final.classList.add("Final");
+          final.innerHTML = DRAW;
+        }
+      }
     }
   });
 
@@ -135,8 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
     PCCount = 0;
     playerCount = 0;
     playButton.disabled = false;
-    plays = 1;
-    document.getElementById("plays").innerHTML = "";
     playButton.classList.remove("error");
     document.getElementById("Final").innerHTML = "";
     final.classList.remove("Final");
